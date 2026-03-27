@@ -1345,7 +1345,7 @@ class BaseCRUDView(BaseModelView):
                 self.post_delete(item)
                 flash(self.delete_row_message, "success")
             except Exception as e:
-                flash(str(e))
+                flash(str(e), "danger")
             self.update_redirect()
 
     """
